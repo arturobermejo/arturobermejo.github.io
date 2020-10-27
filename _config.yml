@@ -36,6 +36,8 @@ markdown: kramdown
 kramdown:
   math_engine: katex
 
+google_analytics: UA-61345008-1
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
