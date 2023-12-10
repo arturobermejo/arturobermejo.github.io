@@ -19,7 +19,6 @@
 # in the templates via {{ site.myvariable }}.
 
 title: Arturo Bermejo
-email: abermejo20@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Programming, AI, Life.
 baseurl: "" # the subpath of your site, e.g. /blog
