@@ -51,7 +51,7 @@
                 
                 <nav>
                     <ul class="sidebar-nav">
-                        <li><a href="{{ .Site.BaseURL }}" {{ if .IsHome }}class="active"{{ end }}>Home</a></li>
+                        <li><a href="{{ .Site.BaseURL }}" {{ if or .IsHome (eq .Section "blog") }}class="active"{{ end }}>Blog</a></li>
                         <li><a href="{{ "projects" | relURL }}" {{ if eq .Section "projects" }}class="active"{{ end }}>Projects</a></li>
                         <li><a href="{{ "music" | relURL }}" {{ if eq .Section "music" }}class="active"{{ end }}>Music</a></li>
                         {{ range .Site.Menus.main }}

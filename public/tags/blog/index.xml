@@ -9,6 +9,13 @@
     <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Bienvenido a Mi Blog</title>
+      <link>http://localhost:1313/blog/welcome-to-my-blog.es/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/welcome-to-my-blog.es/</guid>
+      <description>&lt;p&gt;¡Bienvenido a mi blog personal! Esta es la primera publicación en mi sitio web recientemente rediseñado, y estoy emocionado de compartir este espacio contigo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;qué-puedes-esperar&#34;&gt;Qué Puedes Esperar&lt;/h2&gt;&#xA;&lt;p&gt;En este blog, estaré compartiendo:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tutoriales técnicos&lt;/strong&gt; e ideas de mi trabajo de desarrollo&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Actualizaciones de proyectos&lt;/strong&gt; y miradas detrás de escena de lo que estoy construyendo&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Música y contenido creativo&lt;/strong&gt; de mis esfuerzos artísticos&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reflexiones personales&lt;/strong&gt; sobre tecnología, creatividad y vida&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;el-camino-hasta-ahora&#34;&gt;El Camino Hasta Ahora&lt;/h2&gt;&#xA;&lt;p&gt;Construir este sitio web ha sido un viaje interesante. Quería crear algo que fuera:&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Welcome to My Blog</title>
       <link>http://localhost:1313/blog/welcome-to-my-blog/</link>
       <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>

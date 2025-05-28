@@ -6,8 +6,22 @@
     <description>Recent content on Arturo Bermejo</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Jan 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post Solo en Español</title>
+      <link>http://localhost:1313/blog/solo-en-espanol.es/</link>
+      <pubDate>Sat, 20 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/solo-en-espanol.es/</guid>
+      <description>&lt;p&gt;Este es un post que existe &lt;strong&gt;únicamente en español&lt;/strong&gt; para probar la funcionalidad multiidioma.&lt;/p&gt;&#xA;&lt;h2 id=&#34;funcionalidad-implementada&#34;&gt;Funcionalidad Implementada&lt;/h2&gt;&#xA;&lt;p&gt;Con la nueva configuración:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Este post aparecerá en la lista principal del blog aunque el sitio esté en inglés por defecto&lt;/li&gt;&#xA;&lt;li&gt;Se mostrará un pequeño indicador 🇪🇸 para indicar que está en español&lt;/li&gt;&#xA;&lt;li&gt;Los usuarios podrán leerlo sin problemas&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;casos-de-uso&#34;&gt;Casos de Uso&lt;/h2&gt;&#xA;&lt;p&gt;Esta funcionalidad es útil cuando:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;strong&gt;Escribes un post específico para audiencia hispanohablante&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tienes contenido que no planeas traducir&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Quieres publicar rápidamente sin esperar a traducir&lt;/strong&gt;&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;ventajas&#34;&gt;Ventajas&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Flexibilidad total&lt;/strong&gt;: Publica en el idioma que prefieras&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Sin duplicación forzada&lt;/strong&gt;: No necesitas traducir todo&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Experiencia de usuario fluida&lt;/strong&gt;: Todo el contenido es accesible&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;¡Perfecto para un blog verdaderamente multiidioma!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Bienvenido a Mi Blog</title>
+      <link>http://localhost:1313/blog/welcome-to-my-blog.es/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/welcome-to-my-blog.es/</guid>
+      <description>&lt;p&gt;¡Bienvenido a mi blog personal! Esta es la primera publicación en mi sitio web recientemente rediseñado, y estoy emocionado de compartir este espacio contigo.&lt;/p&gt;&#xA;&lt;h2 id=&#34;qué-puedes-esperar&#34;&gt;Qué Puedes Esperar&lt;/h2&gt;&#xA;&lt;p&gt;En este blog, estaré compartiendo:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tutoriales técnicos&lt;/strong&gt; e ideas de mi trabajo de desarrollo&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Actualizaciones de proyectos&lt;/strong&gt; y miradas detrás de escena de lo que estoy construyendo&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Música y contenido creativo&lt;/strong&gt; de mis esfuerzos artísticos&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Reflexiones personales&lt;/strong&gt; sobre tecnología, creatividad y vida&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;el-camino-hasta-ahora&#34;&gt;El Camino Hasta Ahora&lt;/h2&gt;&#xA;&lt;p&gt;Construir este sitio web ha sido un viaje interesante. Quería crear algo que fuera:&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Welcome to My Blog</title>
       <link>http://localhost:1313/blog/welcome-to-my-blog/</link>

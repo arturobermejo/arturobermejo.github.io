@@ -5,11 +5,10 @@
             
             <nav>
                 <ul class="nav">
-                    <li><a href="{{ .Site.BaseURL }}">Home</a></li>
-                    <li><a href="{{ "about" | relURL }}">About</a></li>
-                    <li><a href="{{ "blog" | relURL }}">Blog</a></li>
-                    <li><a href="{{ "projects" | relURL }}">Projects</a></li>
-                    <li><a href="{{ "music" | relURL }}">Music</a></li>
+                    <li><a href="{{ .Site.BaseURL }}" {{ if or .IsHome (eq .Section "blog") }}class="active"{{ end }}>Blog</a></li>
+                    <li><a href="{{ "about" | relURL }}" {{ if eq .Section "about" }}class="active"{{ end }}>About</a></li>
+                    <li><a href="{{ "projects" | relURL }}" {{ if eq .Section "projects" }}class="active"{{ end }}>Projects</a></li>
+                    <li><a href="{{ "music" | relURL }}" {{ if eq .Section "music" }}class="active"{{ end }}>Music</a></li>
                     {{ range .Site.Menus.main }}
                         <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                     {{ end }}

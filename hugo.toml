@@ -28,15 +28,15 @@ pygmentsCodeFences = true
   # Social links
   [[params.social]]
     name = "GitHub"
-    url = "https://github.com/yourusername"
+    url = "https://github.com/arturobermejo"
   
   [[params.social]]
     name = "LinkedIn"
-    url = "https://linkedin.com/in/yourusername"
+    url = "https://linkedin.com/in/arturobermejo"
   
   [[params.social]]
     name = "Twitter"
-    url = "https://twitter.com/yourusername"
+    url = "https://twitter.com/arturobermejo"
   
   [[params.social]]
     name = "Email"
