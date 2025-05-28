@@ -23,7 +23,7 @@ pygmentsCodeFences = true
   blog_description = "Thoughts, insights, and experiences about technology, development, music, and life."
   
   # Profile image (optional)
-  # profile_image = "/images/profile.jpg"
+  profile_image = "/images/profile.jpg"
   
   # Social links
   [[params.social]]
