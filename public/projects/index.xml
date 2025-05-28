@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Arturo Bermejo</title>
+    <link>http://localhost:1313/projects/</link>
+    <description>Recent content in Projects on Arturo Bermejo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 10 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Website &amp; Portfolio</title>
+      <link>http://localhost:1313/projects/personal-website/</link>
+      <pubDate>Wed, 10 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/projects/personal-website/</guid>
+      <description>&lt;p&gt;This personal website serves as my digital portfolio and blog, showcasing my projects, thoughts, and creative work. Built with a focus on minimalism, performance, and user experience.&lt;/p&gt;&#xA;&lt;h2 id=&#34;project-overview&#34;&gt;Project Overview&lt;/h2&gt;&#xA;&lt;p&gt;The website is designed to be a comprehensive representation of my professional and creative identity, featuring:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Clean, minimalist design&lt;/strong&gt; with a black and white color scheme&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Responsive layout&lt;/strong&gt; that works seamlessly across all devices&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Fast performance&lt;/strong&gt; thanks to Hugo&amp;rsquo;s static site generation&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Flexible content structure&lt;/strong&gt; supporting blog posts, projects, and music&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;technical-implementation&#34;&gt;Technical Implementation&lt;/h2&gt;&#xA;&lt;h3 id=&#34;architecture&#34;&gt;Architecture&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Static Site Generator&lt;/strong&gt;: Hugo for fast, secure, and maintainable websites&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Custom Theme&lt;/strong&gt;: Built from scratch to match my personal aesthetic&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Responsive Design&lt;/strong&gt;: Mobile-first approach ensuring great UX on all devices&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Performance Optimized&lt;/strong&gt;: Minimal JavaScript, optimized CSS, and fast loading times&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;features&#34;&gt;Features&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Blog System&lt;/strong&gt;: Full-featured blog with tags, pagination, and RSS feeds&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Project Portfolio&lt;/strong&gt;: Dedicated section for showcasing development work&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Music Section&lt;/strong&gt;: Space for sharing musical creations and projects&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;SEO Optimized&lt;/strong&gt;: Proper meta tags, Open Graph, and Twitter Card support&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;design-philosophy&#34;&gt;Design Philosophy&lt;/h2&gt;&#xA;&lt;p&gt;The design follows a minimalist approach with:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Arturo Bermejo</title>
+    <link>http://localhost:1313/blog/</link>
+    <description>Recent content in Blog on Arturo Bermejo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Welcome to My Blog</title>
+      <link>http://localhost:1313/blog/welcome-to-my-blog/</link>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/welcome-to-my-blog/</guid>
+      <description>&lt;p&gt;Welcome to my personal blog! This is the first post on my newly redesigned website, and I&amp;rsquo;m excited to share this space with you.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-you-can-expect&#34;&gt;What You Can Expect&lt;/h2&gt;&#xA;&lt;p&gt;In this blog, I&amp;rsquo;ll be sharing:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Technical tutorials&lt;/strong&gt; and insights from my development work&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Project updates&lt;/strong&gt; and behind-the-scenes looks at what I&amp;rsquo;m building&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Music and creative content&lt;/strong&gt; from my artistic endeavors&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Personal reflections&lt;/strong&gt; on technology, creativity, and life&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;the-journey-so-far&#34;&gt;The Journey So Far&lt;/h2&gt;&#xA;&lt;p&gt;Building this website has been an interesting journey. I wanted to create something that was:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

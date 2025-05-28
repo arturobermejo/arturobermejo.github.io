@@ -1,0 +1,12 @@
+name = "Minimal Personal"
+license = "MIT"
+licenselink = "https://github.com/yourusername/minimal-personal/blob/main/LICENSE"
+description = "A minimalist black and white theme for personal websites"
+homepage = "https://github.com/yourusername/minimal-personal"
+tags = ["minimal", "personal", "blog", "portfolio", "black-and-white"]
+features = ["blog", "portfolio", "music", "projects", "responsive"]
+min_version = "0.41.0"
+
+[author]
+  name = "Arturo Bermejo"
+  homepage = "https://arturobermejo.com" 

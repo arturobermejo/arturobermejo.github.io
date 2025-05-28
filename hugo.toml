@@ -1,3 +1,59 @@
 baseURL = 'https://arturobermejo.com/'
 languageCode = 'en-us'
 title = 'Arturo Bermejo'
+theme = 'minimal-personal'
+
+# Pagination (updated format for Hugo v0.128.0+)
+[pagination]
+  pagerSize = 10
+  path = "page"
+
+# Enable syntax highlighting
+pygmentsUseClasses = true
+pygmentsCodeFences = true
+
+[params]
+  description = "Personal website and portfolio of Arturo Bermejo"
+  author = "Arturo Bermejo"
+  email = "your-email@example.com"
+  subtitle = "Personal Blog"
+  
+  # Blog homepage settings
+  blog_title = "Latest Posts"
+  blog_description = "Thoughts, insights, and experiences about technology, development, music, and life."
+  
+  # Profile image (optional)
+  # profile_image = "/images/profile.jpg"
+  
+  # Social links
+  [[params.social]]
+    name = "GitHub"
+    url = "https://github.com/yourusername"
+  
+  [[params.social]]
+    name = "LinkedIn"
+    url = "https://linkedin.com/in/yourusername"
+  
+  [[params.social]]
+    name = "Twitter"
+    url = "https://twitter.com/yourusername"
+  
+  [[params.social]]
+    name = "Email"
+    url = "mailto:your-email@example.com"
+
+# Menu configuration (optional - for additional menu items)
+# [menu]
+#   [[menu.main]]
+#     name = "Contact"
+#     url = "/contact/"
+#     weight = 50
+
+# Markup configuration
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "github"
+    lineNos = false

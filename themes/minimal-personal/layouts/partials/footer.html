@@ -1,0 +1,17 @@
+<footer class="footer">
+    <div class="container">
+        {{ if .Site.Params.social }}
+        <ul class="footer-links">
+            {{ range .Site.Params.social }}
+            <li><a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a></li>
+            {{ end }}
+        </ul>
+        {{ end }}
+        
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Title }}. All rights reserved.</p>
+        
+        {{ if .Site.Params.email }}
+        <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+        {{ end }}
+    </div>
+</footer> 

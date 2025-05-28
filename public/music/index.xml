@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Arturo Bermejo</title>
+    <link>http://localhost:1313/music/</link>
+    <description>Recent content in Music on Arturo Bermejo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/music/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ambient Reflections</title>
+      <link>http://localhost:1313/music/ambient-reflections/</link>
+      <pubDate>Fri, 05 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/music/ambient-reflections/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Ambient Reflections&amp;rdquo; is an atmospheric piece that explores the intersection of electronic textures and organic soundscapes. Created during late-night coding sessions, this track captures the meditative state of deep focus and creative flow.&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-this-track&#34;&gt;About This Track&lt;/h2&gt;&#xA;&lt;p&gt;This composition emerged from my exploration of ambient music as a backdrop for creative work. The piece features:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Layered synthesizers&lt;/strong&gt; creating evolving harmonic textures&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Field recordings&lt;/strong&gt; of natural environments&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Subtle rhythmic elements&lt;/strong&gt; that ebb and flow throughout&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Spatial audio processing&lt;/strong&gt; for an immersive listening experience&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;creative-process&#34;&gt;Creative Process&lt;/h2&gt;&#xA;&lt;p&gt;The track was composed over several weeks, with each session adding new layers and textures. I used a combination of:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
