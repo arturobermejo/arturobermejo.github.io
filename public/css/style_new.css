@@ -26,7 +26,6 @@ body {
     background-color: var(--secondary-color);
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: -0.02em;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -68,7 +67,7 @@ body {
     font-size: 0.8rem;
     color: var(--hover-color);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
     margin-bottom: 2.5rem;
     font-weight: 500;
 }
