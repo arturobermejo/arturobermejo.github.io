@@ -4,6 +4,10 @@ date: 2024-01-15
 draft: false
 author: "Arturo Bermejo"
 tags: ["welcome", "introduction", "blog"]
+language: "en"
+post_id: "welcome-blog"
+slug: "welcome-to-my-blog"
+lang_link: "/blog/bienvenido-a-mi-blog/"
 ---
 
 Welcome to my personal blog! This is the first post on my newly redesigned website, and I'm excited to share this space with you.

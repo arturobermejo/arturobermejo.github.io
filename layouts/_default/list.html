@@ -1,0 +1,223 @@
+{{ define "main" }}
+{{ if .Title }}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+    <div class="page-description">
+        {{ .Content }}
+    </div>
+    {{ end }}
+</header>
+{{ end }}
+
+{{ if eq .Section "blog" }}
+<!-- Blog List with language filtering -->
+<div class="post-list">
+    {{ $allPosts := .Paginator.Pages }}
+    {{ $filteredPosts := slice }}
+    
+    {{ range $allPosts }}
+        {{ $currentPost := . }}
+        {{ $shouldShow := true }}
+        
+        {{ if eq .Params.language "es" }}
+            <!-- This is a Spanish post, check if English version exists -->
+            {{ $postSlug := .Params.slug | default .File.BaseFileName }}
+            {{ $englishVersion := false }}
+            
+            {{ range $allPosts }}
+                {{ $otherSlug := .Params.slug | default .File.BaseFileName }}
+                {{ if and (eq .Params.language "en") (eq .Params.post_id $currentPost.Params.post_id) (ne $currentPost.Params.post_id nil) }}
+                    {{ $englishVersion = true }}
+                {{ end }}
+            {{ end }}
+            
+            {{ if $englishVersion }}
+                {{ $shouldShow = false }}
+            {{ end }}
+        {{ end }}
+        
+        {{ if $shouldShow }}
+            {{ $filteredPosts = $filteredPosts | append $currentPost }}
+        {{ end }}
+    {{ end }}
+    
+    {{ range $filteredPosts }}
+    <article class="post-item">
+        <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
+        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="post-excerpt">{{ .Summary | truncate 200 }}</div>
+        <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+        
+        {{ if .Params.tags }}
+        <div class="post-tags">
+            {{ range .Params.tags }}
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </article>
+    {{ end }}
+</div>
+
+{{ else if eq .Section "projects" }}
+<!-- Projects Grid -->
+<div class="projects-grid">
+    {{ range .Pages }}
+    <article class="project-card">
+        {{ if .Params.image }}
+        <div class="project-image">
+            <img src="{{ .Params.image | relURL }}" alt="{{ .Title }}">
+        </div>
+        {{ else }}
+        <div class="project-image">
+            Project Image
+        </div>
+        {{ end }}
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Summary | truncate 150 }}</p>
+        {{ if .Params.technologies }}
+        <div class="project-meta">
+            <strong>Technologies:</strong> {{ delimit .Params.technologies ", " }}
+        </div>
+        {{ end }}
+        <div class="project-links">
+            {{ if .Params.demo_url }}
+            <a href="{{ .Params.demo_url }}" target="_blank" rel="noopener">Demo</a>
+            {{ end }}
+            {{ if .Params.github_url }}
+            <a href="{{ .Params.github_url }}" target="_blank" rel="noopener">GitHub</a>
+            {{ end }}
+            <a href="{{ .Permalink }}">Details</a>
+        </div>
+    </article>
+    {{ end }}
+</div>
+
+{{ else if eq .Section "music" }}
+<!-- Music List -->
+<div class="music-list">
+    {{ range .Pages }}
+    <div class="music-item">
+        <div class="music-cover">
+            {{ if .Params.cover }}
+            <img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}">
+            {{ else }}
+            ♪
+            {{ end }}
+        </div>
+        <div class="music-info">
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div class="music-meta">
+                {{ if .Params.artist }}{{ .Params.artist }} • {{ end }}
+                {{ .Date.Format "2006" }}
+                {{ if .Params.duration }} • {{ .Params.duration }}{{ end }}
+            </div>
+            {{ if .Summary }}
+            <p>{{ .Summary | truncate 100 }}</p>
+            {{ end }}
+            <div class="music-links">
+                {{ if .Params.spotify_url }}
+                <a href="{{ .Params.spotify_url }}" target="_blank" rel="noopener">Spotify</a>
+                {{ end }}
+                {{ if .Params.youtube_url }}
+                <a href="{{ .Params.youtube_url }}" target="_blank" rel="noopener">YouTube</a>
+                {{ end }}
+                <a href="{{ .Permalink }}">Details</a>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+</div>
+
+{{ else }}
+<!-- Generic List - Show filtered blog posts for homepage -->
+{{ if .IsHome }}
+{{ $allPosts := where .Site.RegularPages "Section" "blog" }}
+{{ if $allPosts }}
+<div class="post-list">
+    {{ $filteredPosts := slice }}
+    
+    {{ range $allPosts }}
+        {{ $currentPost := . }}
+        {{ $shouldShow := true }}
+        
+        {{ if eq .Params.language "es" }}
+            <!-- This is a Spanish post, check if English version exists -->
+            {{ $englishVersion := false }}
+            
+            {{ range $allPosts }}
+                {{ if and (eq .Params.language "en") (eq .Params.post_id $currentPost.Params.post_id) (ne $currentPost.Params.post_id nil) }}
+                    {{ $englishVersion = true }}
+                {{ end }}
+            {{ end }}
+            
+            {{ if $englishVersion }}
+                {{ $shouldShow = false }}
+            {{ end }}
+        {{ end }}
+        
+        {{ if $shouldShow }}
+            {{ $filteredPosts = $filteredPosts | append $currentPost }}
+        {{ end }}
+    {{ end }}
+    
+    {{ range $filteredPosts.ByDate.Reverse }}
+    <article class="post-item">
+        <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
+        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="post-excerpt">{{ .Summary | truncate 200 }}</div>
+        <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+        
+        {{ if .Params.tags }}
+        <div class="post-tags">
+            {{ range .Params.tags }}
+            <a href="{{ "/tags/" | relURL }}{{ . | urlize }}" class="tag">#{{ . }}</a>
+            {{ end }}
+        </div>
+        {{ end }}
+    </article>
+    {{ end }}
+</div>
+{{ else }}
+<div class="no-posts">
+    <h2>Welcome to my blog</h2>
+    <p>No posts have been published yet. Check back soon for new content!</p>
+</div>
+{{ end }}
+{{ else }}
+<!-- Regular pages for other sections -->
+<div class="post-list">
+    {{ range .Pages }}
+    <article class="post-item">
+        <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        {{ if .Date }}
+        <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
+        {{ end }}
+        <div class="post-excerpt">{{ .Summary | truncate 150 }}</div>
+        <a href="{{ .Permalink }}" class="read-more">Read more →</a>
+    </article>
+    {{ end }}
+</div>
+{{ end }}
+{{ end }}
+
+<!-- Pagination -->
+{{ if .Paginator }}
+{{ if gt .Paginator.TotalPages 1 }}
+<nav class="pagination">
+    {{ if .Paginator.HasPrev }}
+    <a href="{{ .Paginator.Prev.URL }}" class="pagination-link">← Previous</a>
+    {{ end }}
+    
+    <span class="pagination-info">
+        Page {{ .Paginator.PageNumber }} of {{ .Paginator.TotalPages }}
+    </span>
+    
+    {{ if .Paginator.HasNext }}
+    <a href="{{ .Paginator.Next.URL }}" class="pagination-link">Next →</a>
+    {{ end }}
+</nav>
+{{ end }}
+{{ end }}
+{{ end }} 

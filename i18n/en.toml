@@ -1,0 +1,26 @@
+[read_in_spanish]
+other = "Leer en español"
+
+[read_in_english]
+other = "Read in English"
+
+[also_available_in]
+other = "Also available in"
+
+[spanish]
+other = "Spanish"
+
+[english]
+other = "English"
+
+[previous_post]
+other = "Previous Post"
+
+[next_post]
+other = "Next Post"
+
+[min_read]
+other = "min read"
+
+[by]
+other = "by" 

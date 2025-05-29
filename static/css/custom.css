@@ -1,0 +1,50 @@
+/* Language switcher styles */
+.language-switcher {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid #e5e7eb;
+}
+
+.language-link {
+    color: #6366f1;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.language-link:hover {
+    color: #4f46e5;
+    text-decoration: underline;
+}
+
+/* Fix for images in post excerpts overflowing margins */
+.post-excerpt img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: block;
+}
+
+/* Ensure all images in post list items are properly constrained */
+.post-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+    display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .language-switcher {
+        margin-top: 0.75rem;
+        padding: 0.75rem 0;
+    }
+    
+    .post-excerpt img,
+    .post-item img {
+        margin: 0.5rem 0;
+    }
+} 
