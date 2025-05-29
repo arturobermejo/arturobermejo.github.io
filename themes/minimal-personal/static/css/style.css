@@ -289,7 +289,6 @@ a:hover {
 
 /* Single Post */
 .post-header {
-    margin-bottom: 3rem;
     text-align: left;
 }
 
@@ -300,7 +299,7 @@ a:hover {
 .post-content img {
     max-width: 100%;
     height: auto;
-    margin: 2rem 0;
+    margin: 1rem 0;
     border-radius: 8px;
 }
 
@@ -518,9 +517,12 @@ a:hover {
 
 /* Language switcher styles */
 .language-switcher {
-    margin-top: 0.5rem;
     padding: 0.5rem 0;
     border-top: 1px solid var(--border-color);
+}
+
+.language-switcher p {
+    margin: 0;
 }
 
 .language-link {
