@@ -11,9 +11,36 @@
 {{ end }}
 
 {{ if eq .Section "blog" }}
-<!-- Blog List -->
+<!-- Blog List with language filtering -->
 <div class="post-list">
-    {{ range .Paginator.Pages }}
+    {{ $allPosts := .Paginator.Pages }}
+    {{ $filteredPosts := slice }}
+    
+    {{ range $allPosts }}
+        {{ $currentPost := . }}
+        {{ $shouldShow := true }}
+        
+        {{ if eq .Params.language "es" }}
+            <!-- This is a Spanish post, check if English version exists -->
+            {{ $englishVersion := false }}
+            
+            {{ range $allPosts }}
+                {{ if and (eq .Params.language "en") (eq .Params.post_id $currentPost.Params.post_id) (ne $currentPost.Params.post_id nil) }}
+                    {{ $englishVersion = true }}
+                {{ end }}
+            {{ end }}
+            
+            {{ if $englishVersion }}
+                {{ $shouldShow = false }}
+            {{ end }}
+        {{ end }}
+        
+        {{ if $shouldShow }}
+            {{ $filteredPosts = $filteredPosts | append $currentPost }}
+        {{ end }}
+    {{ end }}
+    
+    {{ range $filteredPosts }}
     <article class="post-item">
         <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
         <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
@@ -102,12 +129,38 @@
 </div>
 
 {{ else }}
-<!-- Generic List - Show blog posts for homepage -->
+<!-- Generic List - Show filtered blog posts for homepage -->
 {{ if .IsHome }}
-{{ $posts := where .Site.RegularPages "Section" "blog" }}
-{{ if $posts }}
+{{ $allPosts := where .Site.RegularPages "Section" "blog" }}
+{{ if $allPosts }}
 <div class="post-list">
-    {{ range $posts.ByDate.Reverse }}
+    {{ $filteredPosts := slice }}
+    
+    {{ range $allPosts }}
+        {{ $currentPost := . }}
+        {{ $shouldShow := true }}
+        
+        {{ if eq .Params.language "es" }}
+            <!-- This is a Spanish post, check if English version exists -->
+            {{ $englishVersion := false }}
+            
+            {{ range $allPosts }}
+                {{ if and (eq .Params.language "en") (eq .Params.post_id $currentPost.Params.post_id) (ne $currentPost.Params.post_id nil) }}
+                    {{ $englishVersion = true }}
+                {{ end }}
+            {{ end }}
+            
+            {{ if $englishVersion }}
+                {{ $shouldShow = false }}
+            {{ end }}
+        {{ end }}
+        
+        {{ if $shouldShow }}
+            {{ $filteredPosts = $filteredPosts | append $currentPost }}
+        {{ end }}
+    {{ end }}
+    
+    {{ range $filteredPosts.ByDate.Reverse }}
     <article class="post-item">
         <div class="post-meta">{{ .Date.Format "January 2, 2006" }}</div>
         <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>

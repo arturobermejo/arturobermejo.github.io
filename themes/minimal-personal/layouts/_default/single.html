@@ -25,6 +25,23 @@
             </div>
             {{ end }}
         </div>
+        
+        <!-- Language switcher for blog posts only -->
+        {{ if eq .Section "blog" }}
+        <div class="language-switcher mt-2">
+            {{ if .Params.lang_link }}
+            <p class="text-sm">
+                <a href="{{ .Params.lang_link }}" class="language-link">
+                    {{ if eq .Params.language "es" }}
+                        📖 Read in English
+                    {{ else }}
+                        📖 Leer en español
+                    {{ end }}
+                </a>
+            </p>
+            {{ end }}
+        </div>
+        {{ end }}
     </header>
     
     {{ if and (eq .Section "projects") .Params.image }}
@@ -80,18 +97,61 @@
 {{ if eq .Section "blog" }}
 <nav class="post-navigation mt-4">
     <div class="grid grid-2">
-        {{ with .PrevInSection }}
-        <div>
-            <h4>Previous Post</h4>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </div>
+        {{ $allBlogPosts := where .Site.RegularPages "Section" "blog" }}
+        {{ $filteredPosts := slice }}
+        
+        <!-- Filter posts using the same logic as the list template -->
+        {{ range $allBlogPosts }}
+            {{ $currentPost := . }}
+            {{ $shouldShow := true }}
+            
+            {{ if eq .Params.language "es" }}
+                <!-- This is a Spanish post, check if English version exists -->
+                {{ $englishVersion := false }}
+                
+                {{ range $allBlogPosts }}
+                    {{ if and (eq .Params.language "en") (eq .Params.post_id $currentPost.Params.post_id) (ne $currentPost.Params.post_id nil) }}
+                        {{ $englishVersion = true }}
+                    {{ end }}
+                {{ end }}
+                
+                {{ if $englishVersion }}
+                    {{ $shouldShow = false }}
+                {{ end }}
+            {{ end }}
+            
+            {{ if $shouldShow }}
+                {{ $filteredPosts = $filteredPosts | append $currentPost }}
+            {{ end }}
         {{ end }}
         
-        {{ with .NextInSection }}
-        <div class="text-right">
-            <h4>Next Post</h4>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-        </div>
+        <!-- Sort filtered posts by date -->
+        {{ $sortedPosts := $filteredPosts.ByDate }}
+        
+        <!-- Find current post index in filtered list -->
+        {{ $currentIndex := -1 }}
+        {{ range $index, $post := $sortedPosts }}
+            {{ if eq $post.Permalink $.Permalink }}
+                {{ $currentIndex = $index }}
+            {{ end }}
+        {{ end }}
+        
+        <!-- Previous post (older) -->
+        {{ if and (ge $currentIndex 0) (gt $currentIndex 0) }}
+            {{ $prevPost := index $sortedPosts (sub $currentIndex 1) }}
+            <div>
+                <h4>Previous Post</h4>
+                <a href="{{ $prevPost.Permalink }}">{{ $prevPost.Title }}</a>
+            </div>
+        {{ end }}
+        
+        <!-- Next post (newer) -->
+        {{ if and (ge $currentIndex 0) (lt $currentIndex (sub (len $sortedPosts) 1)) }}
+            {{ $nextPost := index $sortedPosts (add $currentIndex 1) }}
+            <div class="text-right">
+                <h4>Next Post</h4>
+                <a href="{{ $nextPost.Permalink }}">{{ $nextPost.Title }}</a>
+            </div>
         {{ end }}
     </div>
 </nav>

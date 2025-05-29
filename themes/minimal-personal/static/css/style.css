@@ -516,6 +516,26 @@ a:hover {
     font-size: 0.9rem;
 }
 
+/* Language switcher styles */
+.language-switcher {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.language-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.language-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
     .main-content {
@@ -558,6 +578,12 @@ a:hover {
     .post-excerpt img,
     .post-item img {
         margin: 0.5rem 0;
+    }
+    
+    /* Responsive adjustments for language switcher */
+    .language-switcher {
+        margin-top: 0.75rem;
+        padding: 0.75rem 0;
     }
 }
 
