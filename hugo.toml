@@ -17,7 +17,7 @@ pygmentsCodeFences = true
   description = "Personal website and portfolio of Arturo Bermejo"
   author = "Arturo Bermejo"
   email = "your-email@example.com"
-  subtitle = "Personal Blog"
+  subtitle = "Developer - Musician - Human"
   
   # Blog homepage settings
   blog_title = "Latest Posts"
