@@ -600,4 +600,53 @@ a:hover {
 .mt-1 { margin-top: 0.5rem; }
 .mt-2 { margin-top: 1rem; }
 .mt-3 { margin-top: 1.5rem; }
-.mt-4 { margin-top: 2rem; } 
+.mt-4 { margin-top: 2rem; }
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: 2rem;
+}
+
+.grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Post Navigation */
+.post-navigation {
+    border-top: 1px solid var(--border-color);
+    padding-top: 2rem;
+    margin-top: 3rem;
+}
+
+.post-navigation h4 {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--hover-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.post-navigation a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.post-navigation a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive adjustments for grid */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .post-navigation .text-right {
+        text-align: left;
+    }
+} 
