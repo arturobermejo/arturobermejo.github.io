@@ -8,12 +8,6 @@
     <article class="post-item">
         <div class="post-meta">
             {{ .Date.Format "January 2, 2006" }}
-            {{/* Show language indicator */}}
-            {{ if eq .Language.Lang "es" }}
-                <span class="lang-indicator">🇪🇸</span>
-            {{ else if eq .Language.Lang "en" }}
-                <span class="lang-indicator">🇺🇸</span>
-            {{ end }}
         </div>
         <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <div class="post-excerpt">{{ .Summary | truncate 200 }}</div>
