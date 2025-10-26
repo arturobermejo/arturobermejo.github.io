@@ -1,19 +1,14 @@
-<header class="header">
-    <div class="container">
-        <div class="header-content">
-            <a href="{{ .Site.BaseURL }}" class="logo">{{ .Site.Title }}</a>
-            
-            <nav>
-                <ul class="nav">
-                    <li><a href="{{ .Site.BaseURL }}" {{ if or .IsHome (eq .Section "blog") }}class="active"{{ end }}>Blog</a></li>
-                    <li><a href="{{ "about" | relURL }}" {{ if eq .Section "about" }}class="active"{{ end }}>About</a></li>
-                    <li><a href="{{ "projects" | relURL }}" {{ if eq .Section "projects" }}class="active"{{ end }}>Projects</a></li>
-                    <li><a href="{{ "music" | relURL }}" {{ if eq .Section "music" }}class="active"{{ end }}>Music</a></li>
-                    {{ range .Site.Menus.main }}
-                        <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                    {{ end }}
-                </ul>
-            </nav>
-        </div>
+<header class="top-header">
+    <div class="header-container">
+        <a href="{{ .Site.BaseURL }}" class="site-name">{{ .Site.Title }}</a>
+        
+        <nav class="top-nav">
+            <ul>
+                <li><a href="{{ .Site.BaseURL }}" {{ if or .IsHome (eq .Section "blog") }}class="active"{{ end }}>Blog</a></li>
+                <li><span class="disabled">Projects</span></li>
+                <li><span class="disabled">Music</span></li>
+                <li><span class="disabled">About</span></li>
+            </ul>
+        </nav>
     </div>
 </header> 

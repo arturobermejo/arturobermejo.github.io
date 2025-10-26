@@ -35,45 +35,8 @@
 </head>
 <body>
     <div class="site-wrapper">
-        <!-- Sidebar -->
-        <aside class="sidebar">
-            <div class="sidebar-content">
-                <a href="{{ .Site.BaseURL }}" class="site-title">{{ .Site.Title }}</a>
-                <div class="site-subtitle">{{ .Site.Params.subtitle | default "Personal Blog" }}</div>
-                
-                {{ if .Site.Params.profile_image }}
-                <div class="profile-image">
-                    <img src="{{ .Site.Params.profile_image | relURL }}" alt="{{ .Site.Title }}">
-                </div>
-                {{ else }}
-                <div class="profile-image">
-                    {{ substr .Site.Title 0 1 | upper }}
-                </div>
-                {{ end }}
-                
-                <nav>
-                    <ul class="sidebar-nav">
-                        <li><a href="{{ .Site.BaseURL }}" {{ if or .IsHome (eq .Section "blog") }}class="active"{{ end }}>Blog</a></li>
-                        <li><a href="{{ "projects" | relURL }}" {{ if eq .Section "projects" }}class="active"{{ end }}>Projects</a></li>
-                        <li><a href="{{ "music" | relURL }}" {{ if eq .Section "music" }}class="active"{{ end }}>Music</a></li>
-                        {{ range .Site.Menus.main }}
-                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
-                        {{ end }}
-                        <li><a href="{{ "about" | relURL }}" {{ if eq .Section "about" }}class="active"{{ end }}>About</a></li>
-                    </ul>
-                </nav>
-                
-                {{ if .Site.Params.social }}
-                <ul class="sidebar-social">
-                    {{ range .Site.Params.social }}
-                    <li><a href="{{ .url }}" target="_blank" rel="noopener" title="{{ .name }}">
-                        {{ if eq .name "GitHub" }}G{{ else if eq .name "Twitter" }}T{{ else if eq .name "LinkedIn" }}L{{ else if eq .name "Email" }}@{{ else }}{{ substr .name 0 1 | upper }}{{ end }}
-                    </a></li>
-                    {{ end }}
-                </ul>
-                {{ end }}
-            </div>
-        </aside>
+        <!-- Top Navigation -->
+        {{ partial "header.html" . }}
         
         <!-- Main Content -->
         <main class="main-content">
