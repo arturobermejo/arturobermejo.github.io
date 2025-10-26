@@ -4,10 +4,6 @@ date: 2025-03-06
 draft: false
 author: "Arturo Bermejo"
 tags: ["tecnología", "llms", "inteligencia artificial"]
-language: "es"
-post_id: "llms-my-learning-way-part-1"
-slug: "mi-camino-entender-llms-relaciones-y-funciones"
-lang_link: "/blog/my-learning-path-llms-relations-and-functions/"
 ---
 
 ![relaciones y funciones](/images/llms-my-learning-way-part-1.jpg)
