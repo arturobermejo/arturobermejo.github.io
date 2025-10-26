@@ -3,6 +3,9 @@ languageCode = 'en-us'
 title = 'Arturo Bermejo'
 theme = 'minimal-personal'
 
+# Google Analytics
+googleAnalytics = "G-WHHJQJJ3VB"  # Reemplaza con tu ID real
+
 # Pagination (updated format for Hugo v0.128.0+)
 [pagination]
   pagerSize = 10

@@ -32,6 +32,9 @@
     {{ end -}}
 
     {{ partialCached "math.html" . }}
+    
+    <!-- Google Analytics -->
+    {{ template "_internal/google_analytics.html" . }}
 </head>
 <body>
     <div class="site-wrapper">
@@ -43,10 +46,5 @@
             {{ block "main" . }}{{ end }}
         </main>
     </div>
-    
-    <!-- Scripts -->
-    {{ if .Site.Params.analytics }}
-    <!-- Add your analytics code here -->
-    {{ end }}
 </body>
 </html> 
