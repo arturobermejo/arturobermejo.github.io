@@ -64,3 +64,7 @@ pygmentsCodeFences = true
   [markup.highlight]
     style = "github"
     lineNos = false
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
