@@ -6,8 +6,6 @@ author: "Arturo Bermejo"
 tags: ["tecnología", "llms", "inteligencia artificial"]
 ---
 
-![relaciones y funciones](/images/llms-my-learning-way-part-1.jpg)
-
 Nuestra vida diaria está llena de variables que depende unas de otras, desde cómo la calidad del sueño afecta a tu salud hasta cómo el clima afecta tu estado de ánimo. Esencialmente, se trata de cómo las cosas se conectan e influyen entre sí.
 
 La inteligencia artificial se suele percibir como un tema muy abstracto, pero podríamos argumentar que en el fondo todo se trata de estas mismas relaciones de dependencia: cómo los datos se conectan, cómo los patrones emergen y cómo los resultados se obtienen a partir de ellos. Por lo tanto es muy útil partir de entender cómo se fundamentan y representan esas relaciones para comprender como funcionan los modelos de inteligencia artificial.
@@ -177,7 +175,7 @@ El resultado es 402, que en nuestra lista de palabras corresponde a "frío", for
 
 > "El cielo es frío"
 
-Ahora, probemos otro conjunto de pesos, cambiando w_2 por 2.0 en lugar de 1.5:
+Ahora, probemos otro conjunto de pesos, cambiando \(w_2\) por 2.0 en lugar de 1.5:
 
 \[
 \begin{align*}
