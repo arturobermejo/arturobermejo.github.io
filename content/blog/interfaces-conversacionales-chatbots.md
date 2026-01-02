@@ -80,3 +80,6 @@ En principio fue entrenado con todas mis conversaciones que me descargue de Face
 
 Nada aún está definido y hay muchas cosas por probar, así que manos a la obra. Si deseas compartir ideas sobre este tema no dudes en contactarme.
 
+---
+
+*Publicado originalmente en [Medium](https://arturobermejo.medium.com/interfaces-conversacionales-y-chatbots-14eeecdfb0a)*
